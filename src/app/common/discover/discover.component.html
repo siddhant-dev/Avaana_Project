@@ -1,0 +1,29 @@
+<div class="discover">
+    <div class="tabs">
+        <nav role="tablist" (keyup)="handleKeyUp($event)">
+            <a #tabs (click)="activatePanel(0)" [ngClass]="{'active': activated==0}" id="tab-article" role="tab" href="javascript:void(0);" 
+                aria-controls="articles">Appointment</a>
+            <a #tabs (click)="activatePanel(1)" [ngClass]="{'active': activated==1}" id="tab-apps" role="tab" href="javascript:void(0);" 
+                aria-controls="apps">Classes</a>
+            <a #tabs (click)="activatePanel(2)" [ngClass]="{'active': activated==2}" id="tab-art" role="tab" href="javascript:void(0);" 
+                aria-controls="art">Online</a>
+        </nav>
+    </div>
+    <div class="search-box">
+        <form>
+            <div class="form-control">
+                <ng-icon name="featherSearch" color="#095D59"></ng-icon>
+                <input type="text" name="service" id="service" placeholder="Search for a service, provider or symptom">
+            </div>
+            <div class="form-control location">
+                <ng-icon name="featherMapPin" color="#095D59"></ng-icon>
+                <input type="text" name="location" id="location" placeholder="Select a location">
+            </div>
+            <div class="form-control date">
+                <ng-icon name="featherCalendar" color="#095D59"></ng-icon>
+                <input type="date" name="data" id="date" placeholder="When do you want to go?">
+            </div>
+            <button type="submit">Discover</button>
+        </form>
+    </div>
+</div>

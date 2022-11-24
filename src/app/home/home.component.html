@@ -1,0 +1,24 @@
+<div class="landing">
+    <h1>
+        Seeking Wellbeing? <br> You’re in the right place.
+    </h1>
+    <app-discover></app-discover>
+</div>
+<div class="container">
+    <h1>
+        Discover wellbeing services near you
+    </h1>
+    <p>
+        Displaying nearby wellbeing for
+        <span class="location">Hawthorn</span>
+    </p>
+    <swiper [slidesPerView]="3" [navigation]="true"
+    [spaceBetween]="25" class="slider">
+        <ng-template swiperSlide  *ngFor="let activity of data">
+            <app-card [activity]="activity"></app-card>
+        </ng-template>
+    </swiper>
+
+    <button>FIND MORE WELLBEING NEARBY</button>
+    
+</div>

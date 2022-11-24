@@ -1,0 +1,80 @@
+@import '../../../styles.scss';
+
+.card {
+    width: 350px;
+    height: auto;
+    background-color: white;
+    color: $bg-color;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    .card-top {
+        display: flex;
+        gap: 1rem;
+       .description {
+        text-transform: uppercase;
+        text-align: left;
+        h6 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+            font-size: 0.625rem;
+            &.location {
+                margin-top: 0.125rem;
+                margin-bottom: .375rem;
+            }
+            &.rating {
+                color: $primary;
+            }
+        }
+       }
+       .fav{
+        margin-left: auto;
+        padding-right: 0.5rem;
+        color: $primary;
+        cursor: pointer;
+       }
+    }
+    .card-mid {
+        .line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 0.5rem;
+            &.with-border {
+                border-bottom: 1px solid $bg-color;
+            }
+            p {
+                margin: 0;
+                &.title {
+                    font-weight: bold;
+                }
+                &.rate {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #00BD71;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .card-footer {
+        display: flex;
+        margin-top: 1rem;
+        gap: 1.5rem;
+        justify-content: space-evenly;
+        button {
+            padding: .625rem 1rem;
+            color: $bg-color;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 0.25rem;
+        }
+    }
+}

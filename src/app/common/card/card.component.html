@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-top">
+        <picture>
+            <img [src]="activity.imageUrl" alt="">
+        </picture>
+        <section class="description">
+            <h6>
+                {{activity.venue}}
+            </h6>
+            <p class="location">
+                {{activity.location}}
+            </p>
+            <p class="rating">
+                {{activity.rating}}
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <span>&starf;</span>
+
+            </p>
+        </section>
+        <ng-icon class="fav" name="featherHeart"></ng-icon>
+    </div>
+    <div class="card-mid">
+        <section class="line with-border">
+            <p class="title">
+                {{activity.name}}
+            </p>
+            <p class="rate">
+                <span>${{activity.pricePerHour}}</span>/hour
+            </p>
+        </section>
+        <section class="line">
+            <p class="availablity">
+                {{activity.availablity | date: 'fullDate'}}
+            </p>
+            <a role="button">Show all times</a>
+        </section>
+    </div>
+    <div class="card-footer">
+        <button>
+            11:00 AM
+        </button>
+        <button>
+            11:00 AM
+        </button>
+        <button>
+            +29 more
+        </button>
+    </div>
+</div>

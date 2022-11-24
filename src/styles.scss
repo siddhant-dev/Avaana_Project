@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+$bg-color: #095D59;
+$primary: #FD896B;
+$secondary: #FFC400;
+$avaana: #00BD71;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Avenir', sans-serif;
+    background-color: $bg-color;
+    color: #fff;
+}
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    padding: .5rem 2rem;
+    color: white;
+    background-color: $primary;
+    border: none;
+    border-radius: 2rem;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: $primary;
+}
